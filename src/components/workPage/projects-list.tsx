@@ -1,36 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import React from "react";
-import { FiFramer } from "react-icons/fi";
-import {
-  RiNextjsFill,
-  RiNodejsFill,
-  RiReactjsFill,
-  RiTailwindCssFill,
-} from "react-icons/ri";
-import {
-  SiCloudinary,
-  SiExpress,
-  SiFastapi,
-  SiFramer,
-  SiHuggingface,
-  SiJsonwebtokens,
-  SiMongodb,
-  SiMongoose,
-  SiPostgresql,
-  SiPrisma,
-  SiPytorch,
-  SiReacthookform,
-  SiReactquery,
-  SiReactrouter,
-  SiRecoil,
-  SiShadcnui,
-  SiSocketdotio,
-  SiTypescript,
-  SiVercel,
-  SiVite,
-} from "react-icons/si";
 import ProjectCard from "./project-card";
 
 interface ProjectProps {
@@ -41,7 +11,6 @@ interface ProjectProps {
   github_url: string;
   deployment_url: string;
   stage: "Completed" | "Development" | "Beta" | "Archived";
-  techUsed: { name: string; symbol?: React.ReactNode }[];
 }
 
 const projects: ProjectProps[] = [
@@ -58,22 +27,6 @@ const projects: ProjectProps[] = [
     github_url: "https://github.com/rishabyadav-dev/DocWise",
     deployment_url: "https://doc-wise.vercel.app",
     stage: "Beta",
-    techUsed: [
-      { name: "Pytorch", symbol: <SiPytorch /> },
-      { name: "FastAPI", symbol: <SiFastapi /> },
-      { name: "NextJS", symbol: <RiNextjsFill /> },
-      { name: "Typescript", symbol: <SiTypescript /> },
-      { name: "Node.js", symbol: <RiNodejsFill /> },
-      { name: "Prisma", symbol: <SiPrisma /> },
-      { name: "Tailwind CSS", symbol: <RiTailwindCssFill /> },
-      { name: "PostgreSQL", symbol: <SiPostgresql /> },
-      { name: "Next-Auth" },
-      { name: "Zustand" },
-      { name: "Vercel", symbol: <SiVercel /> },
-      { name: "Huggingface", symbol: <SiHuggingface /> },
-      { name: "ShadCN", symbol: <SiShadcnui /> },
-      { name: "Framer motion", symbol: <FiFramer /> },
-    ],
   },
   {
     id: 2,
@@ -84,21 +37,6 @@ const projects: ProjectProps[] = [
     github_url: "https://github.com/rishabyadav-dev/EchoLine",
     deployment_url: "https://chat-app-roan-psi.vercel.app",
     stage: "Beta",
-    techUsed: [
-      { name: "Socket.IO", symbol: <SiSocketdotio /> },
-      { name: "NextJS", symbol: <RiNextjsFill /> },
-      { name: "Typescript", symbol: <SiTypescript /> },
-      { name: "Cloudinary", symbol: <SiCloudinary /> },
-      { name: "Node.js", symbol: <RiNodejsFill /> },
-      { name: "Prisma", symbol: <SiPrisma /> },
-      { name: "Tailwind CSS", symbol: <RiTailwindCssFill /> },
-      { name: "PostgreSQL", symbol: <SiPostgresql /> },
-      { name: "Next-Auth" },
-      { name: "Zustand" },
-      { name: "Vercel", symbol: <SiVercel /> },
-      { name: "ShadCN", symbol: <SiShadcnui /> },
-      { name: "Framer motion", symbol: <FiFramer /> },
-    ],
   },
   {
     id: 3,
@@ -109,20 +47,6 @@ const projects: ProjectProps[] = [
     github_url: "https://github.com/rishabyadav-dev/personal-finance-tracker",
     deployment_url: "https://personal-finance-tracker-pied.vercel.app",
     stage: "Beta",
-    techUsed: [
-      { name: "NextJS", symbol: <RiNextjsFill /> },
-      { name: "Typescript", symbol: <SiTypescript /> },
-      { name: "Recharts" },
-      { name: "React hook form", symbol: <SiReacthookform /> },
-      { name: "React query", symbol: <SiReactquery /> },
-
-      { name: "Node.js", symbol: <RiNodejsFill /> },
-      { name: "Mongoose", symbol: <SiMongoose /> },
-      { name: "Tailwind CSS", symbol: <RiTailwindCssFill /> },
-      { name: "MongoDB", symbol: <SiMongodb /> },
-      { name: "Vercel", symbol: <SiVercel /> },
-      { name: "ShadCN", symbol: <SiShadcnui /> },
-    ],
   },
   {
     id: 4,
@@ -133,20 +57,6 @@ const projects: ProjectProps[] = [
     github_url: "https://github.com/rishabyadav-dev/Wavybox",
     deployment_url: "https://wavy-box.vercel.app/",
     stage: "Development",
-    techUsed: [
-      { name: "NextJS", symbol: <RiNextjsFill /> },
-      { name: "Typescript", symbol: <SiTypescript /> },
-      { name: "Node.js", symbol: <RiNodejsFill /> },
-      { name: "Prisma", symbol: <SiPrisma /> },
-      { name: "Tailwind CSS", symbol: <RiTailwindCssFill /> },
-      { name: "PostgreSQL", symbol: <SiPostgresql /> },
-      { name: "Next-Auth" },
-      { name: "Zustand" },
-      { name: "Vercel", symbol: <SiVercel /> },
-      { name: "ShadCN", symbol: <SiShadcnui /> },
-      { name: "Framer motion", symbol: <FiFramer /> },
-      { name: "Cloudinary", symbol: <SiCloudinary /> },
-    ],
   },
   {
     id: 5,
@@ -157,20 +67,6 @@ const projects: ProjectProps[] = [
     github_url: "https://github.com/rishabyadav-dev/Notely",
     deployment_url: "",
     stage: "Archived",
-    techUsed: [
-      { name: "Reactjs", symbol: <RiReactjsFill /> },
-      { name: "Express", symbol: <SiExpress /> },
-      { name: "Recoil", symbol: <SiRecoil /> },
-      { name: "JWT", symbol: <SiJsonwebtokens /> },
-      { name: "Framer motion", symbol: <SiFramer /> },
-      { name: "Vite", symbol: <SiVite /> },
-      { name: "React router", symbol: <SiReactrouter /> },
-
-      { name: "Node.js", symbol: <RiNodejsFill /> },
-      { name: "Mongoose", symbol: <SiMongoose /> },
-      { name: "Tailwind CSS", symbol: <RiTailwindCssFill /> },
-      { name: "MongoDB", symbol: <SiMongodb /> },
-    ],
   },
   {
     id: 6,
@@ -181,19 +77,6 @@ const projects: ProjectProps[] = [
     github_url: "https://github.com/rishabyadav-dev/my-portfolio",
     deployment_url: "",
     stage: "Beta",
-    techUsed: [
-      { name: "NextJS", symbol: <RiNextjsFill /> },
-      { name: "Typescript", symbol: <SiTypescript /> },
-      { name: "Node.js", symbol: <RiNodejsFill /> },
-      { name: "Prisma", symbol: <SiPrisma /> },
-      { name: "Tailwind CSS", symbol: <RiTailwindCssFill /> },
-      { name: "PostgreSQL", symbol: <SiPostgresql /> },
-      { name: "Zustand" },
-      { name: "Vercel", symbol: <SiVercel /> },
-      { name: "ShadCN", symbol: <SiShadcnui /> },
-      { name: "Framer-motion", symbol: <FiFramer /> },
-      { name: "Cloudinary", symbol: <SiCloudinary /> },
-    ],
   },
 ];
 
@@ -214,7 +97,6 @@ export default function ProjectList() {
             github_url={project.github_url}
             deployment_url={project.deployment_url}
             stage={project.stage}
-            techUsed={project.techUsed}
           />
         </div>
       ))}

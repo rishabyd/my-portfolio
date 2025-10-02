@@ -79,9 +79,7 @@ export default async function RootLayout({
             <nav className="fixed z-50 w-fit h-fit bottom-8  rounded-full lg:top-8 left-1/2 -translate-x-1/2">
               <Navbar />
             </nav>
-            <div className="fixed  inset-0 flex justify-center opacity-60 z-10 pointer-events-none">
-              <div className="h-screen bg-gradient-blue-to-white-inverted dark:bg-gradient-blue-to-black-inverted lg:bg-gradient-blue-to-white lg:dark:bg-gradient-blue-to-black w-full mx-auto flex"></div>
-            </div>
+
             <main className="flex-grow z-20  lg:pb-16  pb-0 scrollbar-none bg-white/30 dark:bg-black/30">
               {children}
             </main>
