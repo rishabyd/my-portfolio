@@ -12,7 +12,6 @@ import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 import React from "react";
 import { SiGithub } from "react-icons/si";
-import { SkillColumn } from "../homePage/text-content-side/skill-section/skills";
 import { Separator } from "../ui/separator";
 
 function ProjectCardButton({
@@ -26,7 +25,7 @@ function ProjectCardButton({
 }) {
   return (
     <Link
-      className="flex  items-center rounded-full py-2 px-3 duration-500 border dark:border-2 dark:border-foreground/20  border-gray-400 hover:shadow-lg transition-all  dark:hover:shadow-white/10 hover:shadow-black/10   hover:bg-secondary "
+      className="flex  items-center rounded-full py-2 px-3 duration-500 border dark:border-2  hover:shadow-md transition-all  dark:hover:shadow-white/10 hover:shadow-black/10   hover:bg-secondary "
       href={link}
       target="_blank"
       rel="noopener noreferrer"
@@ -44,7 +43,6 @@ export default function ProjectCard({
   github_url,
   deployment_url,
   stage,
-  techUsed,
 }: {
   title: string;
   description: string;
@@ -52,10 +50,9 @@ export default function ProjectCard({
   github_url: string;
   deployment_url?: string;
   stage: "Completed" | "Development" | "Beta" | "Archived";
-  techUsed: { name: string; symbol?: React.ReactNode }[];
 }) {
   return (
-    <div className="lg:w-4xl  h-auto  lg:h-fit   border shadow-gray-300/50 backdrop-blur-sm dark:bg-black/40 bg-white/40 shadow-inner rounded-4xl px-3 lg:px-10 flex flex-col">
+    <div className="lg:w-4xl  h-auto  lg:h-fit   border-2 backdrop-blur-sm bg-accent/50  rounded-4xl px-3 lg:px-10 flex flex-col">
       <div className="h-fit text-center  py-1.5 text-2xl">{title}</div>
       {thumbnails && thumbnails.length > 0 && (
         <div className="relative  border w-fit  h-fit overflow-hidden rounded-b-none rounded-2xl lg:rounded-b-none shadow-lg">
@@ -97,15 +94,7 @@ export default function ProjectCard({
       <div className="py-2 lg:py-3 text-center px-2 text-lg ">
         {description}
       </div>
-      <Separator className="dark:bg-white/30 bg-black/30" />
-      {techUsed.length > 0 && (
-        <div className={`text-center  py-1.5`}>
-          <SkillColumn
-            className={`  !justify-center !gap-1.5`}
-            iconsArray={techUsed}
-          />
-        </div>
-      )}
+
       <Separator className="dark:bg-white/30 bg-black/30" />
       <div className="flex justify-evenly  py-3">
         {github_url.trim() && (
