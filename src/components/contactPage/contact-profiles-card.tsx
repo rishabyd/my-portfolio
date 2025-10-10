@@ -37,13 +37,13 @@ export default function ContactProfilesCard() {
       <div className="mt-8 gap-4  lg:gap-2.5 justify-center lg:justify-start flex">
         <SocialIconButton
           className=" lg:scale-100 scale-110 "
-          href="https://x.com/rishabyadav_dev"
+          href="https://x.com/rishabyd"
           icon={<BsTwitterX />}
           text="Twitter"
         />
         <SocialIconButton
           className="lg:scale-100 scale-110"
-          href="https://www.linkedin.com/in/rishabyadav-dev/"
+          href="https://www.linkedin.com/in/rishabyd"
           icon={<BsLinkedin />}
           text="Linkedin"
         />
