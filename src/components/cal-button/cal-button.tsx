@@ -27,7 +27,7 @@ export default function CalButton() {
         duration: 0.7,
         ease: "easeInOut",
       }}
-      data-cal-link="rishabyadav-dev"
+      data-cal-link="rishabyd"
       className="cursor-pointer
                  lg:px-4 py-2 px-3
                  dark:bg-foreground/10 bg-foreground/30 border hover:border border-foreground/50
