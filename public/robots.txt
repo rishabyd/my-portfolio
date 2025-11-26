@@ -1,4 +1,4 @@
         User-agent: *
         Allow: /
         
-        Sitemap: https://www.rishabyadav.com/sitemap.xml
+        Sitemap: https://www.rishabyd.com/sitemap.xml
