@@ -1,22 +1,12 @@
 "use client";
 
-import { motion } from "motion/react";
 import Link from "next/link";
 import { BsLinkedin, BsTwitterX } from "react-icons/bs";
 import SocialIconButton from "../homePage/text-content-side/social-icon-strip/social-icon-button";
 
 export default function ContactProfilesCard() {
   return (
-    <motion.div
-      transition={{ duration: 0.8, ease: "easeInOut" }}
-      initial={{
-        opacity: 0,
-        filter: "blur(10px)",
-      }}
-      animate={{
-        opacity: 1,
-        filter: "blur(0px)",
-      }}
+    <div
       className={`font-mono   w-fit
          p-6   h-fit`}
     >
@@ -48,6 +38,6 @@ export default function ContactProfilesCard() {
           text="Linkedin"
         />
       </div>
-    </motion.div>
+    </div>
   );
 }

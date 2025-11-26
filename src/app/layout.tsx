@@ -76,11 +76,11 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <div className="flex flex-col min-h-screen w-screen relative">
-            <nav className="fixed z-50 w-fit h-fit bottom-8  rounded-full lg:top-8 left-1/2 -translate-x-1/2">
+            <nav className="fixed z-50 w-fit h-fit bottom-8   lg:top-8 left-1/2 -translate-x-1/2">
               <Navbar />
             </nav>
 
-            <main className="flex-grow z-20  lg:pb-16  pb-0 scrollbar-none bg-white/30 dark:bg-black/30">
+            <main className="grow z-20  lg:pb-16  pb-0 scrollbar-none bg-white/30 dark:bg-black/30">
               {children}
             </main>
             <footer className="z-20  h-fit w-full">

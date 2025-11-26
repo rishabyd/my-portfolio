@@ -35,10 +35,10 @@ export default async function Home() {
             <IntroArea className="lg:mb-24  mb-12" />
           </section>
           <section id="skills">
-            <SkillsArea className=" bg-accent/20 backdrop-blur-lg  mb-6 border-2 rounded-4xl  px-4 py-6" />
+            <SkillsArea className=" bg-accent/20 backdrop-blur-lg  mb-6 border-2   px-4 py-6" />
           </section>
           <section id="education">
-            <Education className=" bg-accent/20 backdrop-blur-lg  mb-6 border-2 rounded-4xl  px-4 py-6" />
+            <Education className=" bg-accent/20 backdrop-blur-lg  mb-6 border-2   px-4 py-6" />
           </section>
         </div>
       </div>

@@ -18,7 +18,7 @@ export default function SocialIconButton({
   return (
     <Button
       variant={"outline"}
-      className={` ${className} font-mono  px-3 lg:py-5 !h-10 w-fit  lg:!h-10 cursor-pointer rounded-full items-center`}
+      className={` ${className} font-mono  px-3 lg:py-5 h-10 w-fit  lg:h-10 cursor-pointer items-center`}
       {...props}
       asChild
     >
@@ -27,7 +27,7 @@ export default function SocialIconButton({
         target="_blank"
         href={href}
       >
-        <div className=" dark:!text-white place-content-center  lg:scale-100 scale-[110%]  !text-black">
+        <div className=" dark:text-white! place-content-center  lg:scale-100 scale-[110%]  text-black!">
           {icon}
         </div>
         <div className="hidden text-lg md:block">{text}</div>

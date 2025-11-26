@@ -1,6 +1,4 @@
-"use client";
 
-import { motion } from "motion/react";
 import ProjectCard from "./project-card";
 
 interface ProjectProps {
@@ -80,12 +78,9 @@ const projects: ProjectProps[] = [
   },
 ];
 
-export default function ProjectList() {
+export default async function ProjectList() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 70, filter: "blur(10px)" }}
-      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
+    <div
       className="w-full  flex flex-col gap-10 pb-28 items-center h-fit"
     >
       {projects.map((project: ProjectProps) => (
@@ -100,6 +95,6 @@ export default function ProjectList() {
           />
         </div>
       ))}
-    </motion.div>
+    </div>
   );
 }

@@ -25,7 +25,7 @@ function ProjectCardButton({
 }) {
   return (
     <Link
-      className="flex  items-center rounded-full py-2 px-3 duration-500 border dark:border-2  hover:shadow-md transition-all  dark:hover:shadow-white/10 hover:shadow-black/10   hover:bg-secondary "
+      className="flex  items-center  py-2 px-3 duration-500 border dark:border-2  hover:shadow-md transition-all  dark:hover:shadow-white/10 hover:shadow-black/10   hover:bg-secondary "
       href={link}
       target="_blank"
       rel="noopener noreferrer"
@@ -36,7 +36,7 @@ function ProjectCardButton({
   );
 }
 
-export default function ProjectCard({
+export default  function ProjectCard({
   title,
   description,
   thumbnails,
@@ -52,10 +52,10 @@ export default function ProjectCard({
   stage: "Completed" | "Development" | "Beta" | "Archived";
 }) {
   return (
-    <div className="lg:w-4xl  h-auto  lg:h-fit   border-2 backdrop-blur-sm bg-accent/50  rounded-4xl px-3 lg:px-10 flex flex-col">
+    <div className="lg:w-4xl  h-auto  lg:h-fit   border-2 backdrop-blur-sm bg-accent/50   px-3 lg:px-10 flex flex-col">
       <div className="h-fit text-center  py-1.5 text-2xl">{title}</div>
       {thumbnails && thumbnails.length > 0 && (
-        <div className="relative  border w-fit  h-fit overflow-hidden rounded-b-none rounded-2xl lg:rounded-b-none shadow-lg">
+        <div className="relative  border w-fit  h-fit overflow-hidden  shadow-lg">
           <Carousel>
             <CarouselContent>
               {thumbnails.map((pic, index) => (
@@ -85,9 +85,7 @@ export default function ProjectCard({
         </div>
       )}
       <div
-        className={`text-center bg-input/70 p-1 ${
-          thumbnails?.length === 0 ? " rounded-full" : "rounded-b-2xl"
-        }  `}
+        className={`text-center bg-input/70 p-1 `}
       >
         {stage}
       </div>

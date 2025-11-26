@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
 import { RiNextjsFill, RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiGo, SiPostgresql, SiTypescript } from "react-icons/si";
 import SkillIcon from "./skill-icon";
@@ -10,7 +9,6 @@ const SkillIcons = [
   { name: "React", symbol: <RiReactjsFill /> },
   { name: "TypeScript", symbol: <SiTypescript /> },
   { name: "Tailwind CSS", symbol: <RiTailwindCssFill /> },
-  { name: "Golang", symbol: <SiGo /> },
   { name: "PostgreSQL", symbol: <SiPostgresql /> },
 ];
 
@@ -40,10 +38,7 @@ export function SkillColumn({
 
 export default function SkillsArea({ className }: { className?: string }) {
   return (
-    <motion.div
-      initial={{ filter: "blur(10px)", y: 50, opacity: 0 }}
-      animate={{ filter: "blur(0px)", y: 0, opacity: 1 }}
-      transition={{ duration: 0.7, ease: "easeInOut" }}
+    <div
       className={`${className} `}
     >
       <h1 className="text-3xl text-center lg:text-start mb-4 font-bold">
@@ -52,6 +47,6 @@ export default function SkillsArea({ className }: { className?: string }) {
       <div className="flex flex-col gap-5">
         <SkillColumn iconsArray={SkillIcons} />
       </div>
-    </motion.div>
+    </div>
   );
 }

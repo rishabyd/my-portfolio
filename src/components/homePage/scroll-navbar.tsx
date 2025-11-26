@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "motion/react";
 
 export default function ScrollNavigation() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -18,10 +17,7 @@ export default function ScrollNavigation() {
 
   return (
     <nav>
-      <motion.ul
-        initial={{ x: -100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.7, ease: "easeInOut" }}
+      <ul
         className="text-2xl space-y-4"
       >
         <li>
@@ -56,7 +52,7 @@ export default function ScrollNavigation() {
             <span className="transition-colors duration-300 ">Education</span>
           </a>
         </li>
-      </motion.ul>
+      </ul>
     </nav>
   );
 }

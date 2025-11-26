@@ -30,7 +30,7 @@ export default function NavbarButton({
         href === path
           ? "bg-background/70  border border-gray-500/50  dark:bg-input/80 dark:border-input"
           : "!hover:border dark:hover:bg-input/30 hover:bg-input/30 hover:border-gray-500/40",
-        "rounded-full cursor-pointer  duration-500  "
+        " cursor-pointer  duration-500  "
       )}
       variant="outline"
       {...props}
