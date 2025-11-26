@@ -1,7 +1,7 @@
 "use client";
 
 import { RiNextjsFill, RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiGo, SiPostgresql, SiTypescript } from "react-icons/si";
+import {  SiPostgresql, SiTypescript } from "react-icons/si";
 import SkillIcon from "./skill-icon";
 
 const SkillIcons = [
