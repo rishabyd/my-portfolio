@@ -15,12 +15,12 @@ export default function Home() {
       </Head>
 
       <div className="min-h-screen flex justify-center">
-        <main className="w-full lg:w-3xl max-w-screen px-4  lg:px-0 mt-10 md:mt-28 flex flex-col">
+        <main className="w-full lg:w-2xl max-w-screen px-4  lg:px-0 mt-10 lg:mt-28 flex flex-col">
           <section id="intro" className=" mb-6 md:mb-6">
             <IntroArea />
           </section>
 
-          <section id="skills" className="mb-4 md:mb-6">
+          <section id="skills" className="mb-4 lg:mb-0">
             <SkillsArea className=" px-4 py-6 sm:px-0" />
           </section>
 

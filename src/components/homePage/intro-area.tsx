@@ -9,12 +9,12 @@ export default function IntroArea({ className }: { className?: string }) {
         <ProfilePictureArea />
       </div>
 
-      <div>
-        <h1 className="leading-none font-sans lg:mt-4 mt-4  font-semibold lg:text-6xl flex justify-center sm:justify-normal text-[40px]">
+      <div className="">
+        <h1 className="leading-none font-sans lg:mt-0 mt-4  font-semibold lg:text-6xl flex justify-center sm:justify-normal text-[40px]">
           Rishab Yadav
         </h1>
 
-        <p className=" mt-7 lg:text-start text-center mb-6 text-xl">
+        <p className=" mt-3 lg:text-start text-center  text-xl">
           {`I love building cool stuff and experimenting with new ideas. I've worked on a variety of projects.`}
         </p>
       </div>

@@ -72,7 +72,7 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col min-h-screen w-screen relative">
+          <div className="flex flex-col h-screen w-screen relative">
             <nav className="fixed z-50 w-fit h-fit bottom-8   lg:top-8 left-1/2 -translate-x-1/2">
               <Navbar />
             </nav>

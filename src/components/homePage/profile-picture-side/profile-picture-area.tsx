@@ -14,10 +14,6 @@ export default function ProfilePictureArea() {
           src={`/images/profile.webp`}
         ></Image>
       </div>
-
-      <div className="flex md:mt-6 mt-2.5 justify-center text-xl   items-center">
-        Gurgaon/India
-      </div>
     </div>
   );
 }
