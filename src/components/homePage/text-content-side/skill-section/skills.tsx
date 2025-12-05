@@ -1,7 +1,7 @@
 "use client";
 
 import { RiNextjsFill, RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
-import {  SiPostgresql, SiTypescript } from "react-icons/si";
+import { SiPostgresql, SiTypescript } from "react-icons/si";
 import SkillIcon from "./skill-icon";
 
 const SkillIcons = [
@@ -38,9 +38,7 @@ export function SkillColumn({
 
 export default function SkillsArea({ className }: { className?: string }) {
   return (
-    <div
-      className={`${className} `}
-    >
+    <div className={`${className} `}>
       <h1 className="text-3xl text-center lg:text-start mb-4 font-bold">
         Skills
       </h1>

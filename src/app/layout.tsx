@@ -83,13 +83,8 @@ export default async function RootLayout({
             <main className="grow z-20  lg:pb-16  pb-0 scrollbar-none bg-white/30 dark:bg-black/30">
               {children}
             </main>
-            <footer className="z-20  h-fit w-full">
-              <Footer />
-            </footer>
           </div>
         </NextThemesProvider>
-        <SpeedInsights />
-        <Analytics />
       </body>
     </html>
   );

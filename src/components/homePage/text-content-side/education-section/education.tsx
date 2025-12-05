@@ -3,10 +3,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Education({ className }: { className?: string }) {
   return (
-    <div
-
-      className={`${className} `}
-    >
+    <div className={`${className} `}>
       <h1 className="text-3xl text-center lg:text-start mb-4 font-bold">
         Education
       </h1>
