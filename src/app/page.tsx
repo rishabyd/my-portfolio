@@ -24,7 +24,7 @@ export default function Home() {
             <SkillsArea className=" px-4 py-6 sm:px-0" />
           </section>
 
-          <section id="education" className="mb-20 md:mb-10">
+          <section id="education" className="pb-20 md:pb-10">
             <Education className=" px-4 py-6 sm:px-0" />
           </section>
         </main>

@@ -77,7 +77,7 @@ export default async function RootLayout({
               <Navbar />
             </nav>
 
-            <main className="grow z-20  lg:pb-16  pb-0 scrollbar-none bg-white/30 dark:bg-black/30">
+            <main className=" z-20  lg:pb-16  pb-0 scrollbar-none bg-white/30 dark:bg-black/30">
               {children}
             </main>
           </div>
