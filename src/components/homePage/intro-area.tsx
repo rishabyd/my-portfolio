@@ -10,11 +10,11 @@ export default function IntroArea({ className }: { className?: string }) {
       </div>
 
       <div className="">
-        <h1 className="leading-none font-sans lg:mt-0 mt-4  font-semibold lg:text-6xl flex justify-center sm:justify-normal text-[40px]">
+        <h1 className="leading-none font-sans lg:mt-0 mt-4  font-semibold lg:text-6xl flex justify-center sm:justify-normal text-4xl">
           Rishab Yadav
         </h1>
 
-        <p className=" mt-3 lg:text-start text-center  text-xl">
+        <p className=" mt-3 lg:text-start text-center  text-lg">
           {`I love building cool stuff and experimenting with new ideas. I've worked on a variety of projects.`}
         </p>
       </div>
