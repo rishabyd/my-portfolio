@@ -1,10 +1,7 @@
 import Navbar from "@/components/navbar/navbar";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
-import Footer from "@/components/footer/footer-main";
 import { Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
 
