@@ -20,17 +20,14 @@ export default function IntroArea({ className }: { className?: string }) {
           <SocialIconButton
             href="https://github.com/rishabyd"
             icon={<BsGithub />}
-            text="Github"
           />
           <SocialIconButton
             href="https://www.linkedin.com/in/rishabyd"
             icon={<BsLinkedin />}
-            text="Linkedin"
           />
           <SocialIconButton
             href="https://x.com/rishabyd"
             icon={<BsTwitterX />}
-            text="Twitter"
           />
           <Button variant={"link"}>
             <Link
