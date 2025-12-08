@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 interface SocialButtonProps extends React.ComponentProps<typeof Button> {
   className?: string;
-  icon: React.ReactNode;
-  text: string;
+  icon?: React.ReactNode;
+  text?: string;
   href: string;
 }
 export default function SocialIconButton({
@@ -27,10 +27,9 @@ export default function SocialIconButton({
         target="_blank"
         href={href}
       >
-        <div className=" dark:text-white! place-content-center  lg:scale-100 scale-[110%]  text-black!">
+        <div className=" dark:text-white! place-content-center  lg:scale-110 scale-[110%]  text-black!">
           {icon}
         </div>
-        <div className="hidden text-lg md:block">{text}</div>
       </Link>
     </Button>
   );

@@ -39,7 +39,7 @@ export function SkillColumn({
 export default function SkillsArea({ className }: { className?: string }) {
   return (
     <div className={`${className} `}>
-      <h1 className="text-3xl text-center lg:text-start mb-4 font-bold">
+      <h1 className="text-xl text-center lg:text-start mb-2 font-bold">
         Skills
       </h1>
       <div className="flex flex-col gap-5">

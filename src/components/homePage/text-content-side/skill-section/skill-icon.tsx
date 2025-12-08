@@ -12,9 +12,9 @@ export default function SkillIcon({ name, className, icon }: SkillIconProps) {
   return (
     <Badge
       className={clsx(
-        "shadow-lg shadow-foreground/5 border border-input",
+        " border-2 ",
         className,
-        "flex justify-center bg-white dark:bg-black/80 items-center gap-2 px-2 w-fit h-7",
+        "flex justify-center bg-transparent text-foreground/60  items-center gap-2 px-2 w-fit h-7",
       )}
       variant="outline"
     >
