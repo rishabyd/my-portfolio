@@ -27,7 +27,7 @@ export default function SocialIconButton({
         target="_blank"
         href={href}
       >
-        <div className=" dark:text-white! place-content-center  lg:scale-110 scale-[110%]  text-black!">
+        <div className=" dark:text-white! place-content-center  lg:scale-125 scale-100  text-black!">
           {icon}
         </div>
       </Link>

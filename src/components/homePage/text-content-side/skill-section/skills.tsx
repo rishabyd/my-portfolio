@@ -1,15 +1,13 @@
 "use client";
 
-import { RiNextjsFill, RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiPostgresql, SiTypescript } from "react-icons/si";
-import SkillIcon from "./skill-icon";
+import clsx from "clsx";
 
 const SkillIcons = [
-  { name: "NextJS", symbol: <RiNextjsFill /> },
-  { name: "React", symbol: <RiReactjsFill /> },
-  { name: "TypeScript", symbol: <SiTypescript /> },
-  { name: "Tailwind CSS", symbol: <RiTailwindCssFill /> },
-  { name: "PostgreSQL", symbol: <SiPostgresql /> },
+  { name: "NextJS" },
+  { name: "React" },
+  { name: "TypeScript" },
+  { name: "Tailwind CSS" },
+  { name: "PostgreSQL" },
 ];
 
 export function SkillColumn({
@@ -19,19 +17,25 @@ export function SkillColumn({
   iconsArray: {
     name: string;
     className?: string;
-    symbol?: React.ReactNode;
   }[];
   className?: string;
 }) {
   return (
-    <div className="mb-1">
-      <div
-        className={`${className} flex  mt-0.5 md:justify-start flex-wrap gap-1.5`}
-      >
-        {iconsArray.map((icon) => (
-          <SkillIcon name={icon.name} icon={icon.symbol} key={icon.name} />
-        ))}
-      </div>
+    <div
+      className={`${className} flex text-foreground/60 lg:text-sm font-mono text-xs md:justify-start flex-wrap gap-1.5`}
+    >
+      {iconsArray.map((icon) => (
+        <div
+          key={icon.name}
+          className={clsx(
+            " border-2 ",
+            className,
+            "    items-center px-2 py-1 w-fit ",
+          )}
+        >
+          <div className=" text-center">{icon.name}</div>
+        </div>
+      ))}
     </div>
   );
 }
@@ -42,7 +46,7 @@ export default function SkillsArea({ className }: { className?: string }) {
       <h1 className="lg:text-xl text-lg  lg:text-start mb-2 font-bold">
         Skills
       </h1>
-      <div className="flex flex-col  gap-5">
+      <div className=" ">
         <SkillColumn iconsArray={SkillIcons} />
       </div>
     </div>
