@@ -21,11 +21,11 @@ export default function Home() {
           </section>
 
           <section id="skills" className="">
-            <SkillsArea className=" px-4 py-6 sm:px-0" />
+            <SkillsArea className="  py-6 " />
           </section>
 
           <section id="education" className="">
-            <Education className=" px-4 py-6 sm:px-0" />
+            <Education className="  py-6 " />
           </section>
         </main>
       </div>

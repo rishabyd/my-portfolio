@@ -72,7 +72,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <div className="flex flex-col h-dvh w-screen relative">
-            <main className=" z-20  lg:pb-16  pb-0 scrollbar-none bg-white/30 dark:bg-black/30">
+            <main className=" z-20 lg:px-0 px-5 lg:pb-16  pb-0 scrollbar-none bg-white/30 dark:bg-black/30">
               {children}
             </main>
           </div>

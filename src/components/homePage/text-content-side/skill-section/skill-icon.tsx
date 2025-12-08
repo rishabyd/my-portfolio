@@ -18,7 +18,7 @@ export default function SkillIcon({ name, className, icon }: SkillIconProps) {
       )}
       variant="outline"
     >
-      <div className="text-sm text-center">{name}</div>
+      <div className="lg:text-sm text-xs text-center">{name}</div>
       {icon && <div className="scale-150 w-3 text-center h-3">{icon}</div>}
     </Badge>
   );

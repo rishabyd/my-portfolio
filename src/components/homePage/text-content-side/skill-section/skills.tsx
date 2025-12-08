@@ -26,7 +26,7 @@ export function SkillColumn({
   return (
     <div className="mb-1">
       <div
-        className={`${className} flex justify-center mt-0.5 md:justify-start flex-wrap gap-1.5`}
+        className={`${className} flex  mt-0.5 md:justify-start flex-wrap gap-1.5`}
       >
         {iconsArray.map((icon) => (
           <SkillIcon name={icon.name} icon={icon.symbol} key={icon.name} />
@@ -39,10 +39,10 @@ export function SkillColumn({
 export default function SkillsArea({ className }: { className?: string }) {
   return (
     <div className={`${className} `}>
-      <h1 className="text-xl text-center lg:text-start mb-2 font-bold">
+      <h1 className="lg:text-xl text-lg  lg:text-start mb-2 font-bold">
         Skills
       </h1>
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col  gap-5">
         <SkillColumn iconsArray={SkillIcons} />
       </div>
     </div>
