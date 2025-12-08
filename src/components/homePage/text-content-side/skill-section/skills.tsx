@@ -6,8 +6,8 @@ const SkillIcons = [
   { name: "NextJS" },
   { name: "React" },
   { name: "TypeScript" },
-  { name: "Tailwind CSS" },
   { name: "PostgreSQL" },
+  { name: "Tailwind CSS" },
 ];
 
 export function SkillColumn({

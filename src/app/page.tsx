@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
 
       <div className="h-full w-full flex justify-center">
-        <main className="w-full lg:w-2xl  px-2  lg:px-0 pt-10 lg:pt-28  flex-col">
+        <main className="w-full lg:w-2xl  px-2  lg:px-0 pt-20 lg:pt-28  flex-col">
           <section id="intro" className=" ">
             <IntroArea />
           </section>
