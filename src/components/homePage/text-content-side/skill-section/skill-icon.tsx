@@ -14,7 +14,7 @@ export default function SkillIcon({ name, className, icon }: SkillIconProps) {
       className={clsx(
         " border-2 ",
         className,
-        "flex justify-center bg-transparent text-foreground/60  items-center gap-2 px-2 w-fit h-7",
+        "flex justify-center bg-transparent text-foreground/60 font-mono items-center gap-2 px-2  w-fit h-7",
       )}
       variant="outline"
     >
