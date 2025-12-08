@@ -1,7 +1,7 @@
 "use client";
 import { BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import SocialIconButton from "../homePage/text-content-side/social-icon-strip/social-icon-button";
-import { Mail, MailIcon } from "lucide-react";
+import { MailIcon } from "lucide-react";
 
 export default function Navbar() {
   return (
