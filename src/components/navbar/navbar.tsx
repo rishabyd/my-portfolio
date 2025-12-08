@@ -1,6 +1,7 @@
 "use client";
 import { BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import SocialIconButton from "../homePage/text-content-side/social-icon-strip/social-icon-button";
+import { Mail, MailIcon } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -22,6 +23,11 @@ export default function Navbar() {
           href="https://x.com/rishabyd"
           icon={<BsTwitterX />}
           text="Twitter"
+        />
+        <SocialIconButton
+          href="mailto:rishabyd47@gmail.com"
+          icon={<MailIcon />}
+          text="Mail"
         />
       </div>
     </div>

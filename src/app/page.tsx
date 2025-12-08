@@ -14,17 +14,17 @@ export default function Home() {
         />
       </Head>
 
-      <div className="h-full flex justify-center">
-        <main className="w-full lg:w-2xl max-w-screen px-4  lg:px-0 pt-10 lg:pt-28 flex flex-col">
-          <section id="intro" className=" mb-6 md:mb-6">
+      <div className="h-full w-full flex justify-center">
+        <main className="w-full lg:w-2xl  px-2  lg:px-0 pt-10 lg:pt-28  flex-col">
+          <section id="intro" className=" ">
             <IntroArea />
           </section>
 
-          <section id="skills" className="mb-4 lg:mb-0">
+          <section id="skills" className="">
             <SkillsArea className=" px-4 py-6 sm:px-0" />
           </section>
 
-          <section id="education" className="pb-20 md:pb-10">
+          <section id="education" className="">
             <Education className=" px-4 py-6 sm:px-0" />
           </section>
         </main>
