@@ -1,5 +1,3 @@
-"use client";
-
 import clsx from "clsx";
 
 const SkillIcons = [
@@ -40,7 +38,11 @@ export function SkillColumn({
   );
 }
 
-export default function SkillsArea({ className }: { className?: string }) {
+export default async function SkillsArea({
+  className,
+}: {
+  className?: string;
+}) {
   return (
     <div className={`${className} `}>
       <h1 className="lg:text-xl text-lg  lg:text-start mb-2 font-bold">

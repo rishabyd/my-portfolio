@@ -5,7 +5,6 @@ import Link from "next/link";
 interface SocialButtonProps extends React.ComponentProps<typeof Button> {
   className?: string;
   icon?: React.ReactNode;
-
   href: string;
 }
 export default function SocialIconButton({

@@ -1,11 +1,9 @@
-"use client";
-
 import { BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import SocialIconButton from "./text-content-side/social-icon-strip/social-icon-button";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-export default function IntroArea({ className }: { className?: string }) {
+export default async function IntroArea({ className }: { className?: string }) {
   return (
     <div className={`${className} font-mono lg:flex gap-5`}>
       <div className="">

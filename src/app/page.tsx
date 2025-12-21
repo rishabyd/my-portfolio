@@ -3,11 +3,11 @@ import Education from "@/components/homePage/text-content-side/education-section
 import SkillsArea from "@/components/homePage/text-content-side/skill-section/skills";
 import Head from "next/head";
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <Head>
-        <title>Rishab Yadav - Full Stack Web Developer</title>
+        <title>Rishab Yadav</title>
         <meta
           name="description"
           content="Portfolio of Rishab Yadav, a full-stack web developer specializing in Next.js and modern web technologies."

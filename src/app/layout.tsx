@@ -21,12 +21,12 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  title: "Rishab Yadav | Full Stack Web Developer",
+  title: "Rishab Yadav",
   description:
     "Rishab Yadav's portfolio showcases modern web applications built with Next.js, TypeScript, React,  and more. Explore my projects and skills!",
 
   openGraph: {
-    title: "Rishab Yadav | Full Stack Web Developer",
+    title: "Rishab Yadav",
     description:
       "Rishab Yadav's portfolio showcases modern web applications built with Next.js, TypeScript, React,  and more. Explore my projects and skills!",
     url: "https://www.rishabyd.com/",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Rishab Yadav | Full Stack Web Developer",
+    title: "Rishab Yadav",
     description:
       "Explore Rishab Yadav's portfolio: Next.js, React, Typescript & more.",
     images: ["https://www.rishabyd.com/og-image.png"],

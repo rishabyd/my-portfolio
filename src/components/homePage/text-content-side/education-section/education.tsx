@@ -1,6 +1,4 @@
-"use client";
-
-export default function Education({ className }: { className?: string }) {
+export default async function Education({ className }: { className?: string }) {
   return (
     <div className={`${className} `}>
       <h1 className="lg:text-xl text-lg  lg:text-start mb-2 font-bold">
