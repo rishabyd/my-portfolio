@@ -8,7 +8,7 @@ const SkillIcons = [
   { name: "Tailwind CSS" },
 ];
 
-export function SkillColumn({
+export async function SkillColumn({
   iconsArray,
   className,
 }: {

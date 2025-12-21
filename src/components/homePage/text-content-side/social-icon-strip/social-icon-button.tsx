@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 interface SocialButtonProps extends React.ComponentProps<typeof Button> {
@@ -7,7 +5,7 @@ interface SocialButtonProps extends React.ComponentProps<typeof Button> {
   icon?: React.ReactNode;
   href: string;
 }
-export default function SocialIconButton({
+export default async function SocialIconButton({
   icon,
 
   className,
