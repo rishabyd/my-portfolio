@@ -1,11 +1,10 @@
 import clsx from "clsx";
 
 const SkillIcons = [
-  { name: "NextJS" },
   { name: "React" },
+  { name: "Next.js" },
   { name: "TypeScript" },
   { name: "PostgreSQL" },
-  { name: "Tailwind CSS" },
 ];
 
 export async function SkillColumn({
@@ -20,7 +19,7 @@ export async function SkillColumn({
 }) {
   return (
     <div
-      className={`${className} flex text-foreground/60 lg:text-sm font-mono text-xs md:justify-start flex-wrap gap-1.5`}
+      className={`${className} flex text-foreground/60 lg:text-sm font-mono text-xs md:justify-start flex-wrap gap-1.5 `}
     >
       {iconsArray.map((icon) => (
         <div
@@ -28,10 +27,10 @@ export async function SkillColumn({
           className={clsx(
             " border-2 ",
             className,
-            "    items-center px-2 py-1 w-fit ",
+            " flex   items-center  px-2 py-1 w-fit ",
           )}
         >
-          <div className=" text-center">{icon.name}</div>
+          {icon.name}
         </div>
       ))}
     </div>

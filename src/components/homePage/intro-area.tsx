@@ -12,7 +12,7 @@ export default async function IntroArea({ className }: { className?: string }) {
         </h1>
 
         <p className=" mt-3  text-foreground/60  font-extralight  text-lg">
-          {`I love building cool stuff and experimenting with new ideas. I've worked on a variety of projects.`}
+          {`I love building cool stuff, experimenting with new ideas, and watching exceptional movies.`}
         </p>
         <div className={` w-full  pt-4 pb-10  flex   items-center`}>
           <SocialIconButton
