@@ -29,11 +29,11 @@ export const metadata: Metadata = {
     title: "Rishab Yadav",
     description:
       "Rishab Yadav's portfolio showcases modern web applications built with Next.js, TypeScript, React,  and more. Explore my projects and skills!",
-    url: "https://www.rishabyd.com/",
+    url: "https://www.rishabyadav.com/",
     siteName: "Rishab Yadav - Portfolio",
     images: [
       {
-        url: "https://www.rishabyd.com/og-image.png",
+        url: "https://www.rishabyadav.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Rishab Yadav Portfolio Thumbnail",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "Rishab Yadav",
     description:
       "Explore Rishab Yadav's portfolio: Next.js, React, Typescript & more.",
-    images: ["https://www.rishabyd.com/og-image.png"],
+    images: ["https://www.rishabyadav.com/og-image.png"],
   },
 };
 
