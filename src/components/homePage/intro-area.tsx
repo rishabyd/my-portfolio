@@ -1,4 +1,4 @@
-import { BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
+import { BsGithub, BsTwitterX } from "react-icons/bs";
 import SocialIconButton from "./text-content-side/social-icon-strip/social-icon-button";
 import { Button } from "../ui/button";
 import Link from "next/link";
@@ -19,10 +19,7 @@ export default async function IntroArea({ className }: { className?: string }) {
             href="https://github.com/rishabyd"
             icon={<BsGithub />}
           />
-          <SocialIconButton
-            href="https://www.linkedin.com/in/rishabyd"
-            icon={<BsLinkedin />}
-          />
+
           <SocialIconButton
             href="https://x.com/rishabyd"
             icon={<BsTwitterX />}
