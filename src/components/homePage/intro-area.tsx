@@ -20,10 +20,6 @@ export default async function IntroArea({ className }: { className?: string }) {
             icon={<BsGithub />}
           />
 
-          <SocialIconButton
-            href="https://x.com/rishabyd"
-            icon={<BsTwitterX />}
-          />
           <Button variant={"link"}>
             <Link href="mailto:rishabyd47@gmail.com">rishabyd47@gmail.com</Link>
           </Button>
