@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 @import "@fontsource/ibm-plex-mono";
 
 @custom-variant dark (&:is(.dark *));
@@ -44,4 +45,161 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 128px 128px;
+}
+
+@layer components {
+  .prose-brutalist {
+    --tw-prose-body: var(--foreground);
+    --tw-prose-headings: var(--foreground);
+    --tw-prose-links: var(--foreground);
+    --tw-prose-bold: var(--foreground);
+    --tw-prose-code: var(--foreground);
+    --tw-prose-quotes: var(--foreground);
+    --tw-prose-quote-borders: var(--border);
+    --tw-prose-hr: var(--border);
+    --tw-prose-th-borders: var(--border);
+    --tw-prose-td-borders: var(--border);
+    font-family: var(--font-sans);
+    max-width: none;
+  }
+
+  .prose-brutalist h2 {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1.1em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-bottom: 3px solid var(--foreground);
+    padding-bottom: 0.5em;
+  }
+
+  .prose-brutalist h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 1em;
+  }
+
+  .prose-brutalist p {
+    line-height: 1.75;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+  }
+
+  .prose-brutalist a {
+    text-decoration: none;
+    border-bottom: 2px solid var(--foreground);
+    font-weight: 500;
+  }
+
+  .prose-brutalist a:hover {
+    background-color: var(--foreground);
+    color: var(--background);
+  }
+
+  .prose-brutalist strong {
+    font-weight: 800;
+  }
+
+  .prose-brutalist ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .prose-brutalist ul li {
+    padding-left: 1.5em;
+    position: relative;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .prose-brutalist ul li::before {
+    content: "//";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+
+  .prose-brutalist ol {
+    padding-left: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .prose-brutalist ol li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .prose-brutalist blockquote {
+    border-left: 5px solid var(--foreground);
+    padding-left: 1em;
+    font-style: normal;
+    font-weight: 500;
+    background-color: oklch(from var(--foreground) l c h / 0.05);
+    padding: 1em;
+    margin: 1.5em 0;
+  }
+
+  .prose-brutalist blockquote p {
+    margin: 0;
+  }
+
+  .prose-brutalist code {
+    font-family: var(--font-sans);
+    font-size: 0.9em;
+    background-color: oklch(from var(--foreground) l c h / 0.1);
+    padding: 0.2em 0.4em;
+    font-weight: 600;
+  }
+
+  .prose-brutalist pre {
+    border: 3px solid var(--foreground);
+    background-color: oklch(from var(--foreground) l c h / 0.05);
+    padding: 1em;
+    overflow-x: auto;
+    margin: 1.5em 0;
+  }
+
+  .prose-brutalist pre code {
+    background-color: transparent;
+    padding: 0;
+    font-size: 0.85em;
+  }
+
+  .prose-brutalist hr {
+    border: none;
+    border-top: 3px solid var(--foreground);
+    margin: 2em 0;
+  }
+
+  .prose-brutalist table {
+    border: 3px solid var(--foreground);
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5em 0;
+  }
+
+  .prose-brutalist th {
+    border: 2px solid var(--foreground);
+    padding: 0.75em;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    text-align: left;
+    background-color: var(--foreground);
+    color: var(--background);
+  }
+
+  .prose-brutalist td {
+    border: 2px solid var(--foreground);
+    padding: 0.75em;
+  }
+
+  .prose-brutalist img {
+    border: 3px solid var(--foreground);
+  }
 }

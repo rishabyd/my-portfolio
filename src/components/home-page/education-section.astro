@@ -1,0 +1,21 @@
+---
+interface Props {
+  className?: string
+}
+
+const { className } = Astro.props
+---
+
+<div class={className}>
+  <h1 class="mb-2 text-lg font-bold lg:text-start lg:text-xl">
+    Education
+  </h1>
+  <div class="w-full rounded-none border-[5px] border-foreground px-3 py-2 font-mono">
+    <div class="flex flex-col gap-1 text-xs sm:flex-row sm:items-center sm:justify-between sm:text-sm">
+      <div class="font-bold">
+        The NorthCap University - B.Tech (CSE)
+      </div>
+      <div class="font-bold sm:text-right">2022 - 2026</div>
+    </div>
+  </div>
+</div>

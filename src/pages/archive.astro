@@ -1,0 +1,87 @@
+---
+import Layout from "@/layouts/main.astro"
+import { getCollection } from "astro:content"
+
+const allArticles = await getCollection("articles", ({ data }) => !data.draft)
+const sortedArticles = allArticles.sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+)
+
+const articleData = sortedArticles.map((article) => ({
+  slug: article.id,
+  title: article.data.title,
+  description: article.data.description,
+  publishDate: article.data.publishDate.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  }),
+}))
+---
+
+<Layout title="Archive | Rishab Yadav">
+  <div class="flex h-full w-full justify-center">
+    <main
+      class="flex w-full flex-col gap-8 px-4 pt-14 sm:gap-10 lg:w-2xl lg:px-0 lg:pt-18"
+    >
+      <a
+        href="/"
+        class="self-start text-xs font-black uppercase hover:bg-foreground hover:text-background sm:text-base"
+      >
+        &lt;= HOME
+      </a>
+      <section class="flex flex-col gap-6">
+        <div class="flex items-center gap-4">
+          <h1 class="text-2xl font-black sm:text-3xl">[ARCHIVE]</h1>
+          <span class="font-mono text-xs text-foreground/50">_{"{"}"</span>
+        </div>
+        <div class="flex flex-col gap-3">
+          {
+            articleData.length === 0 ? (
+              <div class="flex flex-col gap-4 rounded-none border-[5px] border-foreground p-6">
+                <p class="text-lg font-black uppercase">[COMING SOON]</p>
+                <p class="text-foreground/70">
+                  Articles on programming, technology, and ideas I'm thinking
+                  about.
+                  <br />
+                  Check back later.
+                </p>
+                <div class="mt-2 font-mono text-xs text-foreground/50">
+                  <span class="animate-pulse">_</span>
+                </div>
+              </div>
+            ) : (
+              <>
+                {articleData.map((article) => (
+                  <a
+                    href={`/articles/${article.slug}`}
+                    class="group relative flex flex-col gap-2 rounded-none border-[5px] border-foreground p-4 transition-none hover:bg-foreground hover:text-background"
+                  >
+                    <span class="pointer-events-none absolute top-3 right-3 font-mono text-xs opacity-0 group-hover:text-background group-hover:opacity-100">
+                      =&gt;
+                    </span>
+                    <h2 class="pr-6 font-black tracking-tight uppercase group-hover:text-background">
+                      &gt; {article.title}
+                    </h2>
+                    <p class="text-sm font-medium group-hover:text-background/70">
+                      {article.description}
+                    </p>
+                    <div class="flex items-center gap-2 font-mono text-xs text-foreground/60 group-hover:text-background/60">
+                      <span>//</span>
+                      <time>{article.publishDate}</time>
+                      <span>//</span>
+                      <span class="inline-block animate-pulse">_</span>
+                    </div>
+                  </a>
+                ))}
+              </>
+            )
+          }
+        </div>
+        <div class="mt-4 font-mono text-xs text-foreground/30">
+          <span>// {articleData.length} article(s) found</span>
+        </div>
+      </section>
+    </main>
+  </div>
+</Layout>
