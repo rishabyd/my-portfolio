@@ -1,15 +1,64 @@
 ---
 import "@/styles/global.css"
 
-const { title = "Rishab Yadav | Personal Site" } = Astro.props
+const {
+  title = "Rishab Yadav | Personal Site",
+  description = "I build things, write about ideas, and watch films most people haven't heard of.",
+  url = Astro.url.href,
+  image = "/og-image.png",
+} = Astro.props
+
+const siteName = "Rishab Yadav"
 ---
 
 <html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content="Rishab Yadav" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={url} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:site_name" content={siteName} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- JSON-LD Structured Data -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Rishab Yadav",
+        url: "https://rishabyadav.com",
+        sameAs: ["https://github.com/rishabyd"],
+        jobTitle: "Developer",
+        description: description,
+      })}
+    />
   </head>
   <body>
     <slot />
