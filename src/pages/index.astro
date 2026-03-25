@@ -1,0 +1,65 @@
+---
+import Layout from "@/layouts/main.astro"
+import IntroArea from "@/components/home-page/intro-area"
+import Education from "@/components/home-page/education-section"
+import SkillsArea from "@/components/home-page/skill-section"
+---
+
+<Layout title="Rishab Yadav | Personal Site">
+  <div class="flex h-full w-full justify-center">
+    <main
+      class="flex w-full flex-col gap-8 px-4 pt-14 sm:gap-10 lg:w-2xl lg:px-0 lg:pt-18"
+    >
+      <section
+        id="archive-entry"
+        class="flex w-full items-center justify-between gap-2 rounded-none border-[5px] border-foreground p-3 sm:gap-4 sm:p-5"
+      >
+        <a
+          href="/archive"
+          class="shrink-0 whitespace-nowrap text-xs font-black uppercase transition-colors duration-0 hover:bg-foreground hover:text-background sm:text-base lg:text-lg"
+        >
+          [ View Archive ]
+        </a>
+        <div class="flex shrink-0 items-center justify-start gap-3 sm:gap-6">
+          <!-- GITHUB TEXT LINK -->
+          <a
+            href="https://github.com/rishabyd"
+            target="_blank"
+            class="whitespace-nowrap text-xs font-black uppercase transition-colors duration-0 hover:bg-foreground hover:text-background sm:text-base lg:text-lg"
+          >
+            [ GITHUB ]
+          </a>
+
+          <!-- EMAIL BUTTON -->
+          <a
+            href="mailto:rishabyd47@gmail.com"
+            class="whitespace-nowrap text-xs font-black uppercase transition-colors duration-0 hover:bg-foreground hover:text-background sm:text-base lg:text-lg"
+          >
+            [ EMAIL ]
+          </a>
+        </div>
+      </section>
+      <section
+        id="about"
+        class="flex flex-col gap-8 rounded-none border-[5px] border-foreground p-5 sm:gap-10 sm:p-10 lg:p-12"
+      >
+        <IntroArea client:visible />
+
+        <div class="h-[5px] w-full bg-foreground"></div>
+
+        <SkillsArea client:visible />
+
+        <div class="h-[5px] w-full bg-foreground"></div>
+
+        <Education client:visible />
+      </section>
+      <footer
+        class="mt-12 rounded-none border-y-[5px] border-foreground bg-foreground py-3 text-background sm:mt-16"
+      >
+        <p class="px-4 text-center text-sm font-black tracking-[0.08em] uppercase sm:text-base">
+          RISHAB YADAV • OPEN TO SELECT OPPORTUNITIES
+        </p>
+      </footer>
+    </main>
+  </div>
+</Layout>
