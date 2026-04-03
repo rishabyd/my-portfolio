@@ -20,57 +20,53 @@ const articleData = sortedArticles.map((article) => ({
 ---
 
 <Layout title="Archive | Rishab Yadav">
-  <div class="flex h-full w-full justify-center">
-    <main
-      class="flex w-full flex-col gap-8 px-4 pt-14 sm:gap-10 lg:w-2xl lg:px-0 lg:pt-18"
-    >
+  <div class="flex min-h-screen w-full items-center justify-center p-4 sm:p-6">
+    <main class="flex w-full max-w-[44rem] flex-col gap-6 sm:gap-8">
       <a
         href="/"
-        class="self-start text-xs font-black uppercase hover:bg-foreground hover:text-background sm:text-base"
+        class="self-start whitespace-nowrap border-[3px] border-foreground px-[0.72rem] py-[0.5rem] text-[0.72rem] leading-none font-black tracking-[0.08em] uppercase transition-none hover:bg-foreground hover:text-background sm:px-[0.82rem] sm:py-[0.58rem] sm:text-[0.82rem]"
       >
         &lt;= HOME
       </a>
       <section class="flex flex-col gap-6">
         <div class="flex items-center gap-4">
-          <h1 class="text-2xl font-black sm:text-3xl">[ARCHIVE]</h1>
-          <span class="font-mono text-xs text-foreground/50">_{"{"}"</span>
+          <h1 class="text-[clamp(1.9rem,4.4vw,2.9rem)] leading-none font-black tracking-[0.08em] uppercase">ARCHIVE</h1>
+          <span class="font-mono text-[0.82rem] leading-none font-bold tracking-[0.08em] uppercase">_{"{"}"</span>
         </div>
         <div class="flex flex-col gap-3">
           {
             articleData.length === 0 ? (
-              <div class="flex flex-col gap-4 rounded-none border-[5px] border-foreground p-6">
-                <p class="text-lg font-black uppercase">[COMING SOON]</p>
-                <p class="text-foreground/70">
+              <div class="flex flex-col gap-4 border-[3px] border-foreground bg-background p-6">
+                <p class="text-lg font-black uppercase">COMING SOON</p>
+                <p>
                   Articles on programming, technology, and ideas I'm thinking
                   about.
                   <br />
                   Check back later.
                 </p>
-                <div class="mt-2 font-mono text-xs text-foreground/50">
-                  <span class="animate-pulse">_</span>
-                </div>
+                <div class="mt-2 font-mono text-[0.82rem] leading-none font-bold tracking-[0.08em] uppercase">_</div>
               </div>
             ) : (
               <>
                 {articleData.map((article) => (
                   <a
                     href={`/articles/${article.slug}`}
-                    class="group relative flex flex-col gap-2 rounded-none border-[5px] border-foreground p-4 transition-none hover:bg-foreground hover:text-background"
+                    class="group relative flex flex-col gap-2 border-[3px] border-foreground bg-background p-4 transition-none hover:bg-foreground hover:text-background"
                   >
-                    <span class="pointer-events-none absolute top-3 right-3 font-mono text-xs opacity-0 group-hover:text-background group-hover:opacity-100">
+                    <span class="pointer-events-none absolute top-3 right-3 font-mono text-[0.82rem] leading-none font-bold tracking-[0.08em] uppercase opacity-0 group-hover:text-background group-hover:opacity-100">
                       =&gt;
                     </span>
                     <h2 class="pr-6 font-black tracking-tight uppercase group-hover:text-background">
                       &gt; {article.title}
                     </h2>
-                    <p class="text-sm font-medium group-hover:text-background/70">
+                    <p class="text-sm font-medium group-hover:text-background">
                       {article.description}
                     </p>
-                    <div class="flex items-center gap-2 font-mono text-xs text-foreground/60 group-hover:text-background/60">
+                    <div class="flex items-center gap-2 font-mono text-[0.82rem] leading-none font-bold tracking-[0.08em] uppercase group-hover:text-background">
                       <span>//</span>
                       <time>{article.publishDate}</time>
                       <span>//</span>
-                      <span class="inline-block animate-pulse">_</span>
+                      <span class="inline-block">_</span>
                     </div>
                   </a>
                 ))}
@@ -78,7 +74,7 @@ const articleData = sortedArticles.map((article) => ({
             )
           }
         </div>
-        <div class="mt-4 font-mono text-xs text-foreground/30">
+        <div class="mt-4 font-mono text-[0.82rem] leading-none font-bold tracking-[0.08em] uppercase">
           <span>// {articleData.length} article(s) found</span>
         </div>
       </section>

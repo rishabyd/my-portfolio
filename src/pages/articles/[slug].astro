@@ -20,30 +20,28 @@ const formattedDate = article.data.publishDate.toLocaleDateString("en-US", {
 ---
 
 <Layout title={`${article.data.title} | Rishab Yadav`}>
-  <div class="flex h-full w-full justify-center">
-    <main
-      class="flex w-full flex-col gap-8 px-4 pt-14 sm:gap-10 lg:w-2xl lg:px-0 lg:pt-18"
-    >
+  <div class="flex min-h-screen w-full items-center justify-center p-4 sm:p-6">
+    <main class="flex w-full max-w-[44rem] flex-col gap-6 sm:gap-8">
       <a
         href="/archive"
-        class="self-start font-mono text-xs font-black uppercase hover:bg-foreground hover:text-background sm:text-base"
+        class="self-start whitespace-nowrap border-[3px] border-foreground px-[0.72rem] py-[0.5rem] text-[0.72rem] leading-none font-black tracking-[0.08em] uppercase transition-none hover:bg-foreground hover:text-background sm:px-[0.82rem] sm:py-[0.58rem] sm:text-[0.82rem]"
       >
         &lt;= ARCHIVE
       </a>
-      <article class="rounded-none border-[5px] border-foreground p-5 sm:p-10 lg:p-12">
+      <article class="border-[3px] border-foreground bg-background p-5 sm:p-10 lg:p-12">
         <header class="mb-8">
-          <div class="mb-4 font-mono text-xs text-foreground/50">
-            <span class="animate-pulse">&gt; </span>
+          <div class="mb-4 font-mono text-[0.82rem] leading-none font-bold tracking-[0.08em] uppercase">
+            <span>&gt; </span>
             <span>FILE: {article.id}</span>
             <span class="ml-4">// {formattedDate}</span>
           </div>
-          <h1 class="mb-2 font-black uppercase tracking-tight sm:text-3xl">
+          <h1 class="mb-2 text-[clamp(1.9rem,4.4vw,2.9rem)] leading-none font-black tracking-[0.08em] uppercase">
             {article.data.title}
           </h1>
           {article.data.tags && article.data.tags.length > 0 && (
             <div class="mt-4 flex flex-wrap gap-2">
-              {article.data.tags.map((tag: string) => (
-                <span class="font-mono text-xs font-bold uppercase text-foreground/70">
+              {article.data.tags.map((tag) => (
+                <span class="border-2 border-foreground px-2 py-1 font-mono text-[0.82rem] leading-none font-bold tracking-[0.08em] uppercase">
                   [#{tag}]
                 </span>
               ))}
@@ -54,9 +52,9 @@ const formattedDate = article.data.publishDate.toLocaleDateString("en-US", {
         <div class="prose-brutalist">
           <Content />
         </div>
-        <div class="mt-8 font-mono text-xs text-foreground/40">
+        <div class="mt-8 font-mono text-[0.82rem] leading-none font-bold tracking-[0.08em] uppercase">
           <span>// END OF FILE</span>
-          <span class="ml-4 animate-pulse">_</span>
+          <span class="ml-4">_</span>
         </div>
       </article>
     </main>
