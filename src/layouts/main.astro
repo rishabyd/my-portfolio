@@ -1,17 +1,17 @@
 ---
-import "@/styles/global.css"
+import "@/styles/global.css";
 
 const {
   title = "Rishab Yadav | Personal Site",
   description = "I build things, write about ideas, and watch films most people haven't heard of.",
   url = Astro.url.href,
   image = "/og-image.png",
-} = Astro.props
+} = Astro.props;
 
-const siteName = "Rishab Yadav"
+const siteName = "Rishab Yadav";
 ---
 
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -60,7 +60,7 @@ const siteName = "Rishab Yadav"
       })}
     />
   </head>
-  <body>
+  <body class="bg-[#0a0a0a]">
     <slot />
   </body>
 </html>

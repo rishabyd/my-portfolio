@@ -1,0 +1,34 @@
+---
+const navItems = [
+  { href: "/", label: "About" },
+  { href: "/writing", label: "Writing" },
+  { href: "https://github.com/rishabyd", label: "GitHub", external: true },
+  { href: "https://x.com/rishabyd", label: "X", external: true },
+  { href: "https://codeberg.org/rishabyd", label: "Codeberg", external: true },
+  { href: "mailto:rishabyd47@gmail.com", label: "Email" },
+];
+
+const currentPath = Astro.url.pathname;
+
+function isActive(href: string, external: boolean): boolean {
+  if (external) return false;
+  if (href === "/") return currentPath === "/";
+  return currentPath.startsWith(href);
+}
+---
+
+<nav class="mb-12 flex flex-col sm:flex-row gap-2 text-sm">
+  {navItems.map((item) => (
+    <a
+      href={item.href}
+      target={item.external ? "_blank" : undefined}
+      rel={item.external ? "noopener noreferrer" : undefined}
+      class:list={[
+        "px-3 py-2 text-xs sm:px-2.5 sm:py-1.5 sm:text-xs",
+        isActive(item.href, item.external) ? "bg-white text-black" : "hover:bg-white hover:text-black",
+      ]}
+    >
+      {item.label}
+    </a>
+  ))}
+</nav>

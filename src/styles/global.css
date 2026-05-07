@@ -1,198 +1,103 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-@import "@fontsource/ibm-plex-mono";
-
-@custom-variant dark (&:is(.dark *));
+@import "@fontsource/jetbrains-mono";
 
 @theme inline {
-  --font-sans: "IBM Plex Mono", "Space Mono", "Courier New", monospace;
+  --font-sans: "JetBrains Mono", monospace;
   --color-foreground: var(--foreground);
   --color-background: var(--background);
-  --color-border: var(--border);
+  --color-muted-foreground: var(--muted-foreground);
   --radius: 0rem;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
-  --border: #000000;
-}
-
-.dark {
-  --background: #000000;
-  --foreground: #ffffff;
-  --border: #ffffff;
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
+  --muted-foreground: #a3a3a3;
 }
 
 @layer base {
   * {
-    border-color: var(--border);
+    border-color: var(--foreground);
   }
   body {
     margin: 0;
     background-color: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans);
-    font-size: 17px;
-    line-height: 1.35;
-    letter-spacing: 0.01em;
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 
 @layer components {
-  .prose-brutalist {
+  .prose-minimal {
     --tw-prose-body: var(--foreground);
     --tw-prose-headings: var(--foreground);
     --tw-prose-links: var(--foreground);
     --tw-prose-bold: var(--foreground);
     --tw-prose-code: var(--foreground);
     --tw-prose-quotes: var(--foreground);
-    --tw-prose-quote-borders: var(--border);
-    --tw-prose-hr: var(--border);
-    --tw-prose-th-borders: var(--border);
-    --tw-prose-td-borders: var(--border);
-    font-family: var(--font-sans);
     max-width: none;
   }
 
-  .prose-brutalist h2 {
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-size: 1.1em;
-    margin-top: 2em;
-    margin-bottom: 1em;
-    border-bottom: 3px solid var(--foreground);
-    padding-bottom: 0.5em;
-  }
-
-  .prose-brutalist h3 {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    font-size: 1em;
-  }
-
-  .prose-brutalist p {
-    line-height: 1.55;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-
-  .prose-brutalist a {
-    text-decoration: none;
-    border-bottom: 2px solid var(--foreground);
-    font-weight: 500;
-  }
-
-  .prose-brutalist a:hover {
-    background-color: var(--foreground);
-    color: var(--background);
-  }
-
-  .prose-brutalist strong {
-    font-weight: 800;
-  }
-
-  .prose-brutalist ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-
-  .prose-brutalist ul li {
-    padding-left: 1.5em;
-    position: relative;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-
-  .prose-brutalist ul li::before {
-    content: "//";
-    position: absolute;
-    left: 0;
-    font-weight: 700;
-  }
-
-  .prose-brutalist ol {
-    padding-left: 1.5em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-
-  .prose-brutalist ol li {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-
-  .prose-brutalist blockquote {
-    border-left: 3px solid var(--foreground);
-    padding-left: 1em;
-    font-style: normal;
-    font-weight: 500;
-    background-color: transparent;
-    padding: 1em;
-    margin: 1.5em 0;
-  }
-
-  .prose-brutalist blockquote p {
-    margin: 0;
-  }
-
-  .prose-brutalist code {
-    font-family: var(--font-sans);
-    font-size: 0.9em;
-    background-color: transparent;
-    padding: 0.2em 0.4em;
+  .prose-minimal h2 {
+    font-size: 1.25em;
     font-weight: 600;
-    border: 2px solid var(--foreground);
+    margin-top: 2em;
+    margin-bottom: 0.75em;
   }
 
-  .prose-brutalist pre {
-    border: 3px solid var(--foreground);
+  .prose-minimal p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .prose-minimal a {
+    text-decoration: underline;
+  }
+
+  .prose-minimal code {
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+
+  .prose-minimal pre {
     background-color: transparent;
     padding: 1em;
     overflow-x: auto;
     margin: 1.5em 0;
+    border: 1px solid var(--foreground);
   }
 
-  .prose-brutalist pre code {
-    background-color: transparent;
+  .prose-minimal pre code {
     padding: 0;
     font-size: 0.85em;
   }
 
-  .prose-brutalist hr {
+  .prose-minimal hr {
     border: none;
-    border-top: 3px solid var(--foreground);
+    border-top: 1px solid var(--foreground);
     margin: 2em 0;
   }
 
-  .prose-brutalist table {
-    border: 3px solid var(--foreground);
-    border-collapse: collapse;
-    width: 100%;
+  .prose-minimal ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .prose-minimal ol {
+    padding-left: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .prose-minimal blockquote {
+    border-left: 2px solid var(--foreground);
+    padding-left: 1em;
+    font-style: italic;
     margin: 1.5em 0;
-  }
-
-  .prose-brutalist th {
-    border: 2px solid var(--foreground);
-    padding: 0.75em;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 0.85em;
-    text-align: left;
-    background-color: var(--foreground);
-    color: var(--background);
-  }
-
-  .prose-brutalist td {
-    border: 2px solid var(--foreground);
-    padding: 0.75em;
-  }
-
-  .prose-brutalist img {
-    border: 3px solid var(--foreground);
   }
 }
