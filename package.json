@@ -1,7 +1,7 @@
 {
-  "name": "port-astro",
+  "name": "rishab-yadav",
   "type": "module",
-  "version": "0.0.1",
+  "description": "Personal website and writing - rishabyadav.com",
   "private": true,
   "scripts": {
     "dev": "astro dev",
