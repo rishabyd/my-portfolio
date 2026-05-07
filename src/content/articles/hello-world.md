@@ -1,7 +1,7 @@
 ---
 title: "Hello World"
 description: "Why I built this and what this space is for"
-publishDate: 2024-01-15
+publishDate: 2026-05-07
 tags: ["intro", "personal"]
 ---
 
