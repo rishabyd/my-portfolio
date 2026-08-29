@@ -3,101 +3,102 @@
 @import "@fontsource/jetbrains-mono";
 
 @theme inline {
-  --font-sans: "JetBrains Mono", monospace;
-  --color-foreground: var(--foreground);
-  --color-background: var(--background);
-  --color-muted-foreground: var(--muted-foreground);
-  --radius: 0rem;
+    --font-sans: "JetBrains Mono", monospace;
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --color-muted-foreground: var(--muted-foreground);
+    --radius: 0rem;
 }
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #f5f5f5;
-  --muted-foreground: #a3a3a3;
+    --background: #0a0a0a;
+    --foreground: #f5f5f5;
+    --muted-foreground: #a3a3a3;
 }
 
 @layer base {
-  * {
-    border-color: var(--foreground);
-  }
-  body {
-    margin: 0;
-    background-color: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-sans);
-    font-size: 16px;
-    line-height: 1.5;
-  }
+    * {
+        border-color: var(--foreground);
+    }
+
+    body {
+        margin: 0;
+        background-color: var(--background);
+        color: var(--foreground);
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.5;
+    }
 }
 
 @layer components {
-  .prose-minimal {
-    --tw-prose-body: var(--foreground);
-    --tw-prose-headings: var(--foreground);
-    --tw-prose-links: var(--foreground);
-    --tw-prose-bold: var(--foreground);
-    --tw-prose-code: var(--foreground);
-    --tw-prose-quotes: var(--foreground);
-    max-width: none;
-  }
+    .prose-minimal {
+        --tw-prose-body: var(--foreground);
+        --tw-prose-headings: var(--foreground);
+        --tw-prose-links: var(--foreground);
+        --tw-prose-bold: var(--foreground);
+        --tw-prose-code: var(--foreground);
+        --tw-prose-quotes: var(--foreground);
+        max-width: none;
+    }
 
-  .prose-minimal h2 {
-    font-size: 1.25em;
-    font-weight: 600;
-    margin-top: 2em;
-    margin-bottom: 0.75em;
-  }
+    .prose-minimal h2 {
+        font-size: 1.25em;
+        font-weight: 600;
+        margin-top: 2em;
+        margin-bottom: 0.75em;
+    }
 
-  .prose-minimal p {
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
+    .prose-minimal p {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
 
-  .prose-minimal a {
-    text-decoration: underline;
-  }
+    .prose-minimal a {
+        text-decoration: underline;
+    }
 
-  .prose-minimal code {
-    font-size: 0.9em;
-    font-weight: 500;
-  }
+    .prose-minimal code {
+        font-size: 0.9em;
+        font-weight: 500;
+    }
 
-  .prose-minimal pre {
-    background-color: transparent;
-    padding: 1em;
-    overflow-x: auto;
-    margin: 1.5em 0;
-    border: 1px solid var(--foreground);
-  }
+    .prose-minimal pre {
+        background-color: transparent;
+        padding: 1em;
+        overflow-x: auto;
+        margin: 1.5em 0;
+        border: 1px solid var(--foreground);
+    }
 
-  .prose-minimal pre code {
-    padding: 0;
-    font-size: 0.85em;
-  }
+    .prose-minimal pre code {
+        padding: 0;
+        font-size: 0.85em;
+    }
 
-  .prose-minimal hr {
-    border: none;
-    border-top: 1px solid var(--foreground);
-    margin: 2em 0;
-  }
+    .prose-minimal hr {
+        border: none;
+        border-top: 1px solid var(--foreground);
+        margin: 2em 0;
+    }
 
-  .prose-minimal ul {
-    list-style-type: disc;
-    padding-left: 1.5em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
+    .prose-minimal ul {
+        list-style-type: disc;
+        padding-left: 1.5em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
 
-  .prose-minimal ol {
-    padding-left: 1.5em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
+    .prose-minimal ol {
+        padding-left: 1.5em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
 
-  .prose-minimal blockquote {
-    border-left: 2px solid var(--foreground);
-    padding-left: 1em;
-    font-style: italic;
-    margin: 1.5em 0;
-  }
+    .prose-minimal blockquote {
+        border-left: 2px solid var(--foreground);
+        padding-left: 1em;
+        font-style: italic;
+        margin: 1.5em 0;
+    }
 }
