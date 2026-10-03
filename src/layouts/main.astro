@@ -1,6 +1,7 @@
 ---
 import "@/styles/global.css";
 import { SITE } from "@/config/site";
+import iosevkaLatinRegular from "@fontsource/iosevka/files/iosevka-latin-400-normal.woff2?url";
 
 const {
   title = `${SITE.name} | Personal Site`,
@@ -14,6 +15,13 @@ const {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <link
+      rel="preload"
+      href={iosevkaLatinRegular}
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
 
     <!-- Primary Meta Tags -->
     <title>{title}</title>
