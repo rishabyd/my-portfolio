@@ -1,16 +1,17 @@
-~---
+---
 import Layout from "@/layouts/main.astro";
 import Header from "@/components/header.astro";
+import { SITE } from "@/config/site";
 ---
 
-<Layout title="Rishab Yadav">
+<Layout title={SITE.name}>
     <div class="min-h-dvh p-6 sm:p-12">
-        <main class="mx-auto max-w-2xl">
+        <main class=" max-w-2xl">
             <Header />
 
             <section class="sm:mt-24">
                 <h1 class="text-3xl font-normal tracking-tight">
-                    Rishab Yadav
+                    {SITE.name}
                 </h1>
                 <p class="mt-3 text-muted-foreground">
                     Developer. I write about ideas and occasionally watch films.

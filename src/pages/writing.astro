@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/main.astro";
 import Header from "@/components/header.astro";
+import { SITE } from "@/config/site";
 import { getCollection } from "astro:content";
 
 const allArticles = await getCollection("articles", ({ data }) => !data.draft);
@@ -20,9 +21,9 @@ const articleData = sortedArticles.map((article) => ({
 }));
 ---
 
-<Layout title="Rishab Yadav | Writing">
+<Layout title={`${SITE.name} | Writing`}>
   <div class="min-h-dvh p-6 sm:p-12">
-    <main class="mx-auto max-w-2xl">
+    <main class="max-w-2xl">
       <Header />
 
       <div class="space-y-6">

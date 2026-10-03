@@ -1,0 +1,35 @@
+:root {
+    /* Shared across pages */
+    /* Header navigation buttons */
+    --font-size-nav: 14px;
+    /* Default site text and article paragraphs */
+    --font-size-body: 18px;
+
+    /* Home page */
+    /* Home page title */
+    --font-size-3xl: 32px;
+
+    /* Writing list page */
+    /* Publish dates and article count; article date uses this too */
+    --font-size-xs: 15px;
+    /* Helper text and article descriptions */
+    --font-size-sm: 15px;
+    /* Article titles in the writing list */
+    --font-size-lg: 20px;
+
+    /* Article detail page */
+    /* Article title */
+    --font-size-2xl: 24px;
+    /* H2 headings inside article content */
+    --font-size-prose-heading: 20px;
+    /* Inline code inside articles */
+    --font-size-inline-code: 14px;
+    /* Code inside article code blocks */
+    --font-size-block-code: 14px;
+
+    /* Available Tailwind sizes; currently unused */
+    /* text-base utility */
+    --font-size-base: 16px;
+    /* text-xl utility */
+    --font-size-xl: 20px;
+}

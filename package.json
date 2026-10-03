@@ -1,7 +1,7 @@
 {
   "name": "rishab-yadav",
   "type": "module",
-  "description": "Personal website and writing - rishabyadav.com",
+  "description": "Personal website and writing",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -14,7 +14,7 @@
   "dependencies": {
     "@astrojs/mdx": "^7.0.8",
     "@astrojs/sitemap": "^3.7.3",
-    "@fontsource/jetbrains-mono": "^5.2.8",
+    "@fontsource/iosevka": "^5.3.0",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.2.9",
     "tailwindcss": "^4.3.3",

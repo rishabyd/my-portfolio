@@ -1,9 +1,18 @@
 @import "tailwindcss";
+@import "./typography.css";
 @plugin "@tailwindcss/typography";
-@import "@fontsource/jetbrains-mono";
+@import "@fontsource/iosevka";
 
 @theme inline {
-    --font-sans: "JetBrains Mono", monospace;
+    --font-sans: "Iosevka";
+    --text-xs: var(--font-size-xs);
+    --text-sm: var(--font-size-sm);
+    --text-base: var(--font-size-base);
+    --text-lg: var(--font-size-lg);
+    --text-xl: var(--font-size-xl);
+    --text-2xl: var(--font-size-2xl);
+    --text-3xl: var(--font-size-3xl);
+    --text-nav: var(--font-size-nav);
     --color-foreground: var(--foreground);
     --color-background: var(--background);
     --color-muted-foreground: var(--muted-foreground);
@@ -26,7 +35,7 @@
         background-color: var(--background);
         color: var(--foreground);
         font-family: var(--font-sans);
-        font-size: 16px;
+        font-size: var(--font-size-body);
         line-height: 1.5;
     }
 }
@@ -43,7 +52,7 @@
     }
 
     .prose-minimal h2 {
-        font-size: 1.25em;
+        font-size: var(--font-size-prose-heading);
         font-weight: 600;
         margin-top: 2em;
         margin-bottom: 0.75em;
@@ -59,7 +68,7 @@
     }
 
     .prose-minimal code {
-        font-size: 0.9em;
+        font-size: var(--font-size-inline-code);
         font-weight: 500;
     }
 
@@ -73,7 +82,7 @@
 
     .prose-minimal pre code {
         padding: 0;
-        font-size: 0.85em;
+        font-size: var(--font-size-block-code);
     }
 
     .prose-minimal hr {
